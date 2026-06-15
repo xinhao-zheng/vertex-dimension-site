@@ -1,0 +1,17 @@
+# Dependencies · 依赖
+node_modules/
+
+# Wrangler local state · Wrangler 本地状态
+.wrangler/
+
+# Build output (none required — the site is static)
+# 构建产物（纯静态，无构建步骤）
+dist/
+.cache/
+
+# OS / editor · 系统与编辑器
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
