@@ -1,0 +1,102 @@
+/* =============================================================================
+   VERTEX DIMENSION — Design Tokens
+   Sole source of truth for the visual system. Brand law: black, white, decay —
+   no hue, no ornament.
+   ========================================================================== */
+
+:root {
+  /* --- Absolute values (the only two "real" colors) -------------------- */
+  --vd-black: #000000;
+  --vd-white: #ffffff;
+
+  /* --- Surface (dark is the canonical brand surface) ------------------- */
+  --surface: var(--vd-black);
+  --surface-raised: #060606;
+
+  /* --- Ink ramp: white at descending opacity (hierarchy without hue) --- */
+  --ink-100: rgba(255, 255, 255, 1);      /* the vertex — absolute */
+  --ink-090: rgba(255, 255, 255, 0.9);    /* primary copy */
+  --ink-070: rgba(255, 255, 255, 0.7);    /* secondary copy */
+  --ink-050: rgba(255, 255, 255, 0.5);    /* tertiary / captions */
+  --ink-035: rgba(255, 255, 255, 0.35);   /* labels, indices */
+  --ink-020: rgba(255, 255, 255, 0.2);    /* faint */
+  --ink-012: rgba(255, 255, 255, 0.12);   /* hairlines (strong) */
+  --ink-007: rgba(255, 255, 255, 0.07);   /* hairlines (default) */
+  --ink-004: rgba(255, 255, 255, 0.04);   /* coordinate grid */
+
+  /* --- Hairlines & structure ------------------------------------------- */
+  --line: var(--ink-007);
+  --line-strong: var(--ink-012);
+  --grid-line: var(--ink-004);
+
+  /* --- Typography ------------------------------------------------------- */
+  --font-sans: "Inter", "Helvetica Neue", "PingFang SC", "Microsoft YaHei",
+    "Hiragino Sans GB", "Noto Sans SC", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "IBM Plex Mono", "SFMono-Regular", "Menlo",
+    "Consolas", ui-monospace, monospace;
+
+  /* Fluid type scale — minor-third-ish, tuned for a cold editorial feel.
+     clamp(min, fluid, max) keeps every breakpoint mathematically composed. */
+  --fs-display: clamp(3.2rem, 1.2rem + 6.8vw, 9rem);
+  --fs-h1: clamp(2.4rem, 1.4rem + 4vw, 5rem);
+  --fs-h2: clamp(1.8rem, 1.2rem + 2.4vw, 3.25rem);
+  --fs-h3: clamp(1.3rem, 1.05rem + 1.05vw, 1.9rem);
+  --fs-lead: clamp(1.075rem, 0.98rem + 0.5vw, 1.4rem);
+  --fs-body: clamp(0.98rem, 0.94rem + 0.18vw, 1.075rem);
+  --fs-small: 0.875rem;
+  --fs-label: 0.72rem;
+  --fs-micro: 0.66rem;
+
+  --lh-tight: 1.04;
+  --lh-snug: 1.18;
+  --lh-text: 1.62;
+
+  /* Tracking — wide for inscribed, lapidary labels (carved-in-metal feel) */
+  --track-display: -0.02em;
+  --track-tight: -0.01em;
+  --track-wide: 0.18em;
+  --track-wider: 0.32em;
+  --track-widest: 0.42em;
+
+  --weight-thin: 200;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+
+  /* --- Spacing (8px base, geometric growth) ---------------------------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --space-11: 12rem;
+
+  /* Section rhythm scales with viewport, but stays generous (克制即高级) */
+  --section-pad-y: clamp(5rem, 3.5rem + 8vw, 11rem);
+
+  /* --- Layout ----------------------------------------------------------- */
+  --measure: 64ch;            /* optimal reading width */
+  --container: 1340px;        /* outer bound */
+  --container-wide: 1560px;
+  --gutter: clamp(1.25rem, 0.5rem + 3.4vw, 4rem);
+  --nav-h: 72px;
+
+  /* --- Motion — deliberate, no overshoot. Cold precision, not play. ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);       /* expo-out */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-linear: linear;
+  --dur-fast: 0.24s;
+  --dur-mid: 0.5s;
+  --dur-slow: 0.9s;
+  --dur-reveal: 1.1s;
+
+  --z-field: 0;
+  --z-content: 1;
+  --z-nav: 50;
+  --z-overlay: 80;
+}

@@ -1,0 +1,99 @@
+/* =============================================================================
+   VERTEX DIMENSION — Motion
+   Scroll reveal and keyframes. Cold precision — short, no overshoot.
+   ========================================================================== */
+
+/* Base reveal state — set by JS adding .reveal to candidates, then .is-in */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity var(--dur-reveal) var(--ease-out),
+    transform var(--dur-reveal) var(--ease-out);
+  will-change: opacity, transform;
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Staggered children: each step delays by --i * 60ms */
+.reveal[style*="--i"] {
+  transition-delay: calc(var(--i) * 0.06s);
+}
+
+/* Line-mask reveal for hero title words */
+.mask-rise {
+  opacity: 0;
+  transform: translateY(110%);
+  transition: opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
+}
+.is-loaded .mask-rise {
+  opacity: 1;
+  transform: none;
+}
+.is-loaded .mask-rise:nth-child(1) { transition-delay: 0.05s; }
+.is-loaded .mask-rise:nth-child(2) { transition-delay: 0.16s; }
+.is-loaded .mask-rise:nth-child(3) { transition-delay: 0.27s; }
+
+/* Generic fade for late hero elements */
+.fade-up {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
+}
+.is-loaded .fade-up {
+  opacity: 1;
+  transform: none;
+}
+.is-loaded .fade-up[data-delay="1"] { transition-delay: 0.45s; }
+.is-loaded .fade-up[data-delay="2"] { transition-delay: 0.6s; }
+.is-loaded .fade-up[data-delay="3"] { transition-delay: 0.78s; }
+.is-loaded .fade-up[data-delay="4"] { transition-delay: 0.95s; }
+
+/* =============================================================================
+   Keyframes
+   ========================================================================== */
+@keyframes cue-sweep {
+  0% { transform: translateX(-100%); }
+  55% { transform: translateX(100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.caret::after {
+  content: "_";
+  margin-left: 0.1em;
+  animation: blink 1.1s steps(1) infinite;
+  color: var(--ink-050);
+}
+
+/* =============================================================================
+   Reduced motion — honor the user's system preference completely
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal,
+  .mask-rise,
+  .fade-up {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .scroll-cue__bar::after {
+    display: none;
+  }
+}

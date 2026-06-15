@@ -1,0 +1,5 @@
+# Cloudflare Pages — vertex-dimension-site
+# Login once: npx wrangler login · Deploy: npm run deploy
+name = "vertex-dimension"
+compatibility_date = "2025-06-01"
+pages_build_output_dir = "."

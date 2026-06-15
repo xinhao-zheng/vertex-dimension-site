@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="1120" viewBox="0 0 1060 1120">
+<rect width="1060" height="1120" fill="#000000"/>
+<circle cx="530.00" cy="440.00" r="36.00" fill="#ffffff" opacity="1.000"/>
+<circle cx="530.00" cy="372.00" r="24.80" fill="#ffffff" opacity="1.000"/>
+<circle cx="530.00" cy="292.00" r="17.20" fill="#ffffff" opacity="0.880"/>
+<circle cx="530.00" cy="188.00" r="10.80" fill="#ffffff" opacity="0.600"/>
+<circle cx="588.89" cy="406.00" r="24.80" fill="#ffffff" opacity="1.000"/>
+<circle cx="658.17" cy="366.00" r="17.20" fill="#ffffff" opacity="0.880"/>
+<circle cx="748.24" cy="314.00" r="10.80" fill="#ffffff" opacity="0.600"/>
+<circle cx="588.89" cy="474.00" r="24.80" fill="#ffffff" opacity="1.000"/>
+<circle cx="658.17" cy="514.00" r="17.20" fill="#ffffff" opacity="0.880"/>
+<circle cx="748.24" cy="566.00" r="10.80" fill="#ffffff" opacity="0.600"/>
+<circle cx="530.00" cy="508.00" r="24.80" fill="#ffffff" opacity="1.000"/>
+<circle cx="530.00" cy="588.00" r="17.20" fill="#ffffff" opacity="0.880"/>
+<circle cx="530.00" cy="692.00" r="10.80" fill="#ffffff" opacity="0.600"/>
+<circle cx="471.11" cy="474.00" r="24.80" fill="#ffffff" opacity="1.000"/>
+<circle cx="401.83" cy="514.00" r="17.20" fill="#ffffff" opacity="0.880"/>
+<circle cx="311.76" cy="566.00" r="10.80" fill="#ffffff" opacity="0.600"/>
+<circle cx="471.11" cy="406.00" r="24.80" fill="#ffffff" opacity="1.000"/>
+<circle cx="401.83" cy="366.00" r="17.20" fill="#ffffff" opacity="0.880"/>
+<circle cx="311.76" cy="314.00" r="10.80" fill="#ffffff" opacity="0.600"/>
+<circle cx="586.00" cy="343.01" r="10.80" fill="#ffffff" opacity="0.620"/>
+<circle cx="636.00" cy="256.40" r="6.40" fill="#ffffff" opacity="0.360"/>
+<circle cx="642.00" cy="440.00" r="10.80" fill="#ffffff" opacity="0.620"/>
+<circle cx="742.00" cy="440.00" r="6.40" fill="#ffffff" opacity="0.360"/>
+<circle cx="586.00" cy="536.99" r="10.80" fill="#ffffff" opacity="0.620"/>
+<circle cx="636.00" cy="623.60" r="6.40" fill="#ffffff" opacity="0.360"/>
+<circle cx="474.00" cy="536.99" r="10.80" fill="#ffffff" opacity="0.620"/>
+<circle cx="424.00" cy="623.60" r="6.40" fill="#ffffff" opacity="0.360"/>
+<circle cx="418.00" cy="440.00" r="10.80" fill="#ffffff" opacity="0.620"/>
+<circle cx="318.00" cy="440.00" r="6.40" fill="#ffffff" opacity="0.360"/>
+<circle cx="474.00" cy="343.01" r="10.80" fill="#ffffff" opacity="0.620"/>
+<circle cx="424.00" cy="256.40" r="6.40" fill="#ffffff" opacity="0.360"/>
+<circle cx="530.00" cy="104.00" r="5.60" fill="#ffffff" opacity="0.280"/>
+<circle cx="820.98" cy="272.00" r="5.60" fill="#ffffff" opacity="0.280"/>
+<circle cx="820.98" cy="608.00" r="5.60" fill="#ffffff" opacity="0.280"/>
+<circle cx="530.00" cy="776.00" r="5.60" fill="#ffffff" opacity="0.280"/>
+<circle cx="239.02" cy="608.00" r="5.60" fill="#ffffff" opacity="0.280"/>
+<circle cx="239.02" cy="272.00" r="5.60" fill="#ffffff" opacity="0.280"/>
+<text x="530" y="890" text-anchor="middle" fill="#ffffff" font-family="Inter,Helvetica Neue,Helvetica,Arial,sans-serif" font-weight="500" font-size="36" letter-spacing="0.20em" opacity="0.96">VERTEX DIMENSION</text>
+</svg>

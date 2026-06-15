@@ -1,0 +1,550 @@
+/* =============================================================================
+   VERTEX DIMENSION — Components
+   Reusable parts: buttons, metrics, panels, lists. Authored once, composed
+   elsewhere.
+   ========================================================================== */
+
+/* --- Button: a precise rectangle, no radius, no glow ------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  padding: 0.95rem 1.6rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--ink-090);
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  transition: color var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+.btn .arrow {
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+.btn:hover {
+  background: var(--vd-white);
+  color: var(--vd-black);
+  border-color: var(--vd-white);
+}
+.btn:hover .arrow {
+  transform: translateX(4px);
+}
+.btn--ghost {
+  border-color: transparent;
+  padding-inline: 0;
+}
+.btn--ghost:hover {
+  background: transparent;
+  color: var(--ink-100);
+}
+.btn--ghost:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* --- Tag / chip -------------------------------------------------------- */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.3rem 0.7rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--ink-070);
+  border: 1px solid var(--line-strong);
+}
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* --- Eyebrow dot (a single vertex used as a marker) -------------------- */
+.vertex-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--vd-white);
+  flex: none;
+}
+
+/* =============================================================================
+   Metric — large mono figure with caption (animated count-up)
+   ========================================================================== */
+.metric {
+  padding-block: var(--space-5);
+}
+.metric__value {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-light);
+  font-size: clamp(2.4rem, 1.4rem + 3.4vw, 4.4rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink-100);
+  font-feature-settings: "tnum", "zero";
+  display: flex;
+  align-items: baseline;
+  gap: 0.12em;
+}
+.metric__unit {
+  font-size: 0.42em;
+  color: var(--ink-050);
+  letter-spacing: 0;
+}
+.metric__label {
+  margin-top: var(--space-3);
+  font-size: var(--fs-small);
+  color: var(--ink-070);
+  letter-spacing: 0;
+}
+.metric__sub {
+  margin-top: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--ink-035);
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.metric-grid > .metric {
+  background: var(--surface);
+  padding: clamp(1.5rem, 1rem + 2vw, 2.6rem);
+}
+@media (min-width: 720px) {
+  .metric-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =============================================================================
+   Dimension panels — the three business lines
+   ========================================================================== */
+.dimensions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--line);
+  border-block: 1px solid var(--line);
+}
+@media (min-width: 980px) {
+  .dimensions {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.dimension {
+  position: relative;
+  background: var(--surface);
+  padding: clamp(1.8rem, 1.2rem + 2.4vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  min-height: clamp(360px, 30vw, 460px);
+  overflow: hidden;
+  transition: background var(--dur-mid) var(--ease-out);
+}
+.dimension:hover {
+  background: var(--surface-raised);
+}
+.dimension__index {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-wide);
+  color: var(--ink-035);
+}
+.dimension__roman {
+  font-family: var(--font-mono);
+  font-size: clamp(2.2rem, 1.4rem + 2.6vw, 3.4rem);
+  font-weight: var(--weight-thin);
+  line-height: 1;
+  color: var(--ink-020);
+  letter-spacing: 0.05em;
+  transition: color var(--dur-mid) var(--ease-out);
+}
+.dimension:hover .dimension__roman {
+  color: var(--ink-050);
+}
+.dimension__title {
+  font-size: var(--fs-h3);
+  font-weight: var(--weight-light);
+  color: var(--ink-100);
+}
+.dimension__en {
+  margin-top: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--ink-035);
+}
+.dimension__body {
+  color: var(--ink-070);
+  font-size: var(--fs-small);
+  line-height: 1.6;
+}
+.dimension__sublabel {
+  margin-top: auto;
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--ink-035);
+}
+.dimension__list {
+  margin-top: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.dimension__list li {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  padding-block: 0.7rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--ink-070);
+}
+.dimension__list li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: var(--ink-050);
+  flex: none;
+}
+
+/* =============================================================================
+   Axiom list — "The Method" (cold numbered steps)
+   ========================================================================== */
+.axioms {
+  border-top: 1px solid var(--line);
+}
+.axiom {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: var(--space-4);
+  padding-block: clamp(1.4rem, 1rem + 1.4vw, 2.2rem);
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+  transition: padding-left var(--dur-mid) var(--ease-out);
+}
+.axiom:hover {
+  padding-left: var(--space-4);
+}
+@media (min-width: 760px) {
+  .axiom {
+    grid-template-columns: 6rem 1fr 1.1fr;
+    gap: var(--space-6);
+  }
+}
+.axiom__num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--ink-035);
+  letter-spacing: var(--track-wide);
+}
+.axiom__title {
+  font-size: var(--fs-h3);
+  font-weight: var(--weight-light);
+  color: var(--ink-100);
+}
+.axiom__note {
+  color: var(--ink-050);
+  font-size: var(--fs-small);
+  line-height: 1.55;
+}
+
+/* =============================================================================
+   Ledger — edge / advantage list
+   ========================================================================== */
+.ledger {
+  border-top: 1px solid var(--line);
+}
+.ledger__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+  padding-block: clamp(1.3rem, 1rem + 1.2vw, 2rem);
+  border-bottom: 1px solid var(--line);
+}
+@media (min-width: 760px) {
+  .ledger__row {
+    grid-template-columns: 0.6fr 1.4fr;
+    gap: var(--space-6);
+    align-items: baseline;
+  }
+}
+.ledger__key {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--ink-070);
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+.ledger__key .idx {
+  color: var(--ink-020);
+}
+.ledger__val {
+  color: var(--ink-090);
+  font-size: var(--fs-lead);
+  font-weight: var(--weight-light);
+  line-height: 1.4;
+}
+
+/* =============================================================================
+   Horizon list — frontier directions
+   ========================================================================== */
+.frontier {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+@media (min-width: 640px) {
+  .frontier { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1000px) {
+  .frontier { grid-template-columns: repeat(3, 1fr); }
+}
+.frontier__cell {
+  background: var(--surface);
+  padding: clamp(1.4rem, 1rem + 1.6vw, 2.2rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-height: 180px;
+  transition: background var(--dur-fast) var(--ease-out);
+}
+.frontier__cell:hover {
+  background: var(--surface-raised);
+}
+.frontier__coord {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-wide);
+  color: var(--ink-035);
+}
+.frontier__name {
+  font-size: var(--fs-h3);
+  font-weight: var(--weight-light);
+  color: var(--ink-100);
+}
+.frontier__desc {
+  margin-top: auto;
+  font-size: var(--fs-small);
+  color: var(--ink-050);
+}
+
+/* =============================================================================
+   Definition pair (Vertex / Dimension etymology)
+   ========================================================================== */
+.defs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+@media (min-width: 720px) {
+  .defs { grid-template-columns: 1fr 1fr; }
+}
+.def {
+  background: var(--surface);
+  padding: clamp(1.8rem, 1.2rem + 2vw, 3rem);
+}
+.def__term {
+  font-size: var(--fs-h2);
+  font-weight: var(--weight-thin);
+  color: var(--ink-100);
+  letter-spacing: 0;
+}
+.def__pos {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--ink-035);
+  margin-top: 0.4rem;
+}
+.def__gloss {
+  margin-top: var(--space-4);
+  color: var(--ink-070);
+  font-size: var(--fs-small);
+  line-height: 1.6;
+}
+
+/* =============================================================================
+   Architecture matrix — the integrated-platform spec table
+   ========================================================================== */
+.matrix-wrap {
+  border: 1px solid var(--line);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.matrix {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+.matrix th,
+.matrix td {
+  text-align: left;
+  vertical-align: top;
+  padding: clamp(1rem, 0.6rem + 1vw, 1.7rem);
+  border-bottom: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+.matrix th:last-child,
+.matrix td:last-child {
+  border-right: 0;
+}
+.matrix tbody tr:last-child th,
+.matrix tbody tr:last-child td {
+  border-bottom: 0;
+}
+.matrix thead th {
+  border-bottom: 1px solid var(--line-strong);
+}
+.matrix__corner {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--ink-035);
+}
+.matrix__roman {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  color: var(--ink-035);
+}
+.matrix__name {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: var(--fs-h3);
+  font-weight: var(--weight-light);
+  color: var(--ink-100);
+}
+.matrix__sub {
+  display: block;
+  margin-top: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--ink-035);
+}
+.matrix tbody th {
+  width: 16%;
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  font-weight: var(--weight-regular);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--ink-050);
+  white-space: nowrap;
+}
+.matrix tbody td {
+  color: var(--ink-090);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  max-width: 30ch;
+}
+
+.arch__note {
+  margin-top: clamp(2rem, 3vw, 3rem);
+  max-width: 72ch;
+  color: var(--ink-070);
+  font-size: var(--fs-lead);
+  font-weight: var(--weight-light);
+}
+
+/* =============================================================================
+   Closing band — the page's quiet last breath (statement + email only)
+   ========================================================================== */
+.closing {
+  margin-top: clamp(3.5rem, 6vw, 6rem);
+  padding-top: clamp(2rem, 3vw, 3rem);
+  border-top: 1px solid var(--line-strong);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+}
+.closing__line {
+  font-size: clamp(1.3rem, 1rem + 1.4vw, 2.1rem);
+  font-weight: var(--weight-thin);
+  letter-spacing: var(--track-tight);
+  color: var(--ink-070);
+}
+.closing__mail {
+  font-family: var(--font-mono);
+  font-size: var(--fs-lead);
+  letter-spacing: var(--track-tight);
+  color: var(--ink-100);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  border-bottom: 1px solid var(--ink-020);
+  padding-bottom: 0.35rem;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+.closing__mail .arrow {
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+.closing__mail:hover {
+  border-color: var(--ink-090);
+}
+.closing__mail:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* =============================================================================
+   Contact lines
+   ========================================================================== */
+.contact-line {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--line);
+}
+.contact-line__key {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--ink-035);
+  width: 5.5rem;
+  flex: none;
+}
+.contact-line__val {
+  color: var(--ink-090);
+  font-size: var(--fs-small);
+}
+.contact-line a.contact-line__val {
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.contact-line a.contact-line__val:hover {
+  color: var(--ink-100);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vertex Dimension — Intelligence · Capital · Trust</title>
+    <meta
+      name="description"
+      content="Vertex Dimension makes the world computable. We model, price, and allocate what a civilization runs on: intelligence, capital, and trust. Founded 2025, Beijing."
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark" />
+
+    <link rel="canonical" href="https://vertex-dimension.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vertex-dimension.com/" />
+    <meta property="og:title" content="Vertex Dimension" />
+    <meta
+      property="og:description"
+      content="Make the world computable. We model, price, and allocate intelligence, capital, and trust."
+    />
+    <meta property="og:image" content="https://vertex-dimension.com/assets/brand/og-dark.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://vertex-dimension.com/assets/brand/og-dark.png" />
+
+    <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=JetBrains+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/sections.css" />
+    <link rel="stylesheet" href="assets/css/motion.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#mission" data-zh="跳到主内容">Skip to content</a>
+
+    <div class="field" aria-hidden="true">
+      <div class="field__grid"></div>
+      <canvas id="field-canvas"></canvas>
+    </div>
+
+    <div class="progress" aria-hidden="true"></div>
+
+    <!-- ===================================================================
+         NAVIGATION
+         ================================================================ -->
+    <header class="nav">
+      <div class="nav__inner">
+        <a class="brand" href="#" aria-label="Vertex Dimension">
+          <svg
+            class="brand__mark"
+            viewBox="0 0 100 100"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <circle cx="50" cy="50" r="9" fill="#fff" />
+            <g fill="#fff" opacity="0.9">
+              <circle cx="50" cy="24" r="5.4" />
+              <circle cx="72.52" cy="37" r="5.4" />
+              <circle cx="72.52" cy="63" r="5.4" />
+              <circle cx="50" cy="76" r="5.4" />
+              <circle cx="27.48" cy="63" r="5.4" />
+              <circle cx="27.48" cy="37" r="5.4" />
+            </g>
+            <g fill="#fff" opacity="0.4">
+              <circle cx="69" cy="17.09" r="2.4" />
+              <circle cx="88" cy="50" r="2.4" />
+              <circle cx="69" cy="82.91" r="2.4" />
+              <circle cx="31" cy="82.91" r="2.4" />
+              <circle cx="12" cy="50" r="2.4" />
+              <circle cx="31" cy="17.09" r="2.4" />
+            </g>
+          </svg>
+          <span class="brand__word">Vertex Dimension</span>
+        </a>
+
+        <nav class="nav__menu" aria-label="Primary">
+          <a class="nav__link" href="#mission" data-zh="使命">Mission</a>
+          <a class="nav__link" href="#architecture" data-zh="架构">Architecture</a>
+          <a class="nav__link" href="#dimensions" data-zh="维度">Dimensions</a>
+          <a class="nav__link" href="#edge" data-zh="优势">Edge</a>
+          <a class="nav__link" href="#method" data-zh="方法">Method</a>
+          <a class="nav__link" href="#horizon" data-zh="边界">Horizon</a>
+        </nav>
+
+        <div class="nav__tools">
+          <div class="lang" role="group" aria-label="Language">
+            <button class="lang__btn" data-lang="en" aria-pressed="true">
+              EN
+            </button>
+            <button class="lang__btn" data-lang="zh" aria-pressed="false">
+              ZH
+            </button>
+          </div>
+          <button class="nav__burger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page" id="top">
+      <!-- =================================================================
+           HERO
+           ============================================================== -->
+      <section class="hero" aria-label="Vertex Dimension">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <div class="hero__eyebrow fade-up" data-delay="1">
+              <span class="vertex-dot"></span>
+              <span class="label" data-zh="北京 · 二〇二五年创立">Beijing · Est. 2025</span>
+            </div>
+
+            <h1 class="hero__title">
+              <span class="line"><span class="word mask-rise">VERTEX</span></span>
+              <span class="line"
+                ><span class="word mask-rise">DIMENSION</span></span
+              >
+            </h1>
+
+            <p
+              class="hero__statement fade-up"
+              data-delay="3"
+              data-zh="从一个原点，展开所有维度。智能、资本、信任——一个文明赖以运转的东西，我们为它们建模、定价，并最优配置。"
+            >
+              From one point, all dimensions unfold. We model, price, and
+              allocate what a civilization runs on — intelligence, capital, and
+              trust.
+            </p>
+
+            <div class="hero__meta fade-up" data-delay="4">
+              <span class="label" data-zh="智能">Intelligence</span>
+              <span class="dot-sep"></span>
+              <span class="label" data-zh="资本">Capital</span>
+              <span class="dot-sep"></span>
+              <span class="label" data-zh="信任">Trust</span>
+            </div>
+
+            <div class="hero__meta fade-up" data-delay="4" style="margin-top: 2rem">
+              <a class="scroll-cue" href="#mission">
+                <span class="scroll-cue__bar"></span>
+                <span data-zh="向下展开">Scroll</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__stage">
+            <canvas
+              id="logo-canvas"
+              role="img"
+              aria-label="Vertex Dimension — 3D radial point field"
+            ></canvas>
+          </div>
+        </div>
+
+        <div class="hero__readout">
+          <span data-zh="39.9042°N · 116.4074°E — 北京"
+            >39.9042°N · 116.4074°E — Beijing</span
+          >
+          <span class="u-nowrap caret" data-zh="场 · 活跃">Field · Active</span>
+          <span class="mono" data-clock>00:00:00 UTC</span>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           01 — MISSION
+           ============================================================== -->
+      <section class="section" id="mission" aria-labelledby="mission-h">
+        <div class="container">
+          <div class="section__head reveal">
+            <span class="section__index">01 / 06</span>
+            <span class="section__kicker" data-zh="使命">Mission</span>
+          </div>
+
+          <h2
+            class="statement-xl reveal"
+            id="mission-h"
+            data-zh="把世界，化为<em>可计算的。</em>"
+          >
+            Make the world <em>computable.</em>
+          </h2>
+
+          <div class="split split--21" style="margin-top: clamp(2.5rem, 4vw, 4.5rem)">
+            <div>
+              <p
+                class="lead reveal"
+                data-zh="智能、资本、信任，是一个文明赖以运转的东西——而它们至今仍被习惯、直觉、和先行者随手配置。"
+              >
+                Intelligence, capital, and trust are what a civilization runs on
+                — and each is still allocated by habit, by intuition, by whoever
+                moved first.
+              </p>
+              <p
+                class="lead reveal dim"
+                data-zh="这不是靠扩大规模就能修复的执行问题，而是一处结构性的缺失：没有模型。我们只做一件弥合它的事——把每个问题写成可计算的系统，让更好的答案胜出，而非更响的那个。"
+                style="margin-top: 1.6rem"
+              >
+                This is not an execution problem that scale will fix; it is the
+                absence of a model. We build the one thing that closes the gap —
+                systems that state each problem as a computation, so the better
+                answer wins, not the louder one.
+              </p>
+              <p
+                class="reveal"
+                data-zh="我们不是用技术的投资者，也不是顺手做交易的研究者。我们把现实写成方程——再让方程来决定。"
+                style="margin-top: 2rem; font-size: var(--fs-lead); color: var(--ink-100); font-weight: var(--weight-light)"
+              >
+                We are not investors who use technology, nor researchers who
+                happen to trade. We write reality as equations — and let the
+                equations decide.
+              </p>
+            </div>
+
+            <div class="reveal">
+              <div class="label" data-zh="名字的含义" style="margin-bottom: 1.2rem">
+                The name, decoded
+              </div>
+              <div class="defs">
+                <div class="def">
+                  <div class="def__term">Vertex</div>
+                  <div class="def__pos" data-zh="名词 · 图论 / 几何">
+                    n. — graph theory / geometry
+                  </div>
+                  <p
+                    class="def__gloss"
+                    data-zh="结构由此开始的、不可再分的原点。唯一完全确定的元素。"
+                  >
+                    The indivisible origin from which structure begins. The one
+                    element that is fully certain.
+                  </p>
+                </div>
+                <div class="def">
+                  <div class="def__term">Dimension</div>
+                  <div class="def__pos" data-zh="名词 · 线性代数 / 物理">
+                    n. — linear algebra / physics
+                  </div>
+                  <p
+                    class="def__gloss"
+                    data-zh="系统得以延展的自由轴。每增加一维，可能性的空间随之扩张。"
+                  >
+                    A free axis along which a system extends. Add one, and the
+                    space of the possible grows.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           02 — ARCHITECTURE
+           ============================================================== -->
+      <section class="section" id="architecture" aria-labelledby="arch-h">
+        <div class="container container--wide">
+          <div class="section__head reveal">
+            <span class="section__index">02 / 06</span>
+            <span class="section__kicker" data-zh="架构">Architecture</span>
+          </div>
+
+          <div class="split split--12" style="margin-bottom: clamp(2.5rem, 4vw, 4rem)">
+            <h2
+              class="statement-lg reveal"
+              id="arch-h"
+              data-zh="我们不做三件事。我们做一件事——在三个维度上。"
+            >
+              We do not do three things. We do one thing — across three
+              dimensions.
+            </h2>
+            <p
+              class="lead reveal measure"
+              data-zh="内核只有一个——把复杂系统化为可计算的。智能、资本、信任不是三项业务，而是这个内核的三次投影；因为内核共享，一个维度上的推进，就是三个维度上的推进。"
+            >
+              The core is single — reduce a complex system to a computation.
+              Intelligence, capital, and trust are not three businesses but
+              three projections of that core; because the core is shared, an
+              advance in one is an advance in all.
+            </p>
+          </div>
+
+          <div class="matrix-wrap reveal">
+            <table class="matrix">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <span class="matrix__corner" data-zh="底层资源">Substrate</span>
+                  </th>
+                  <th scope="col">
+                    <span class="matrix__roman">I</span>
+                    <span class="matrix__name" data-zh="智能">Intelligence</span>
+                    <span class="matrix__sub" data-zh="人工智能">Artificial Intelligence</span>
+                  </th>
+                  <th scope="col">
+                    <span class="matrix__roman">II</span>
+                    <span class="matrix__name" data-zh="资本">Capital</span>
+                    <span class="matrix__sub" data-zh="量化金融">Quantitative Finance</span>
+                  </th>
+                  <th scope="col">
+                    <span class="matrix__roman">III</span>
+                    <span class="matrix__name" data-zh="信任">Trust</span>
+                    <span class="matrix__sub" data-zh="区块链">Blockchain</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" data-zh="命题">The question</th>
+                  <td data-zh="认知能否被规模化地生产？">Can cognition be produced at scale?</td>
+                  <td data-zh="稀缺的资本应如何配置？">How should scarce capital be allocated?</td>
+                  <td data-zh="陌生人如何无需中介地协作？">How do strangers coordinate without a middleman?</td>
+                </tr>
+                <tr>
+                  <th scope="row" data-zh="形态">Form</th>
+                  <td data-zh="把研究直接锻造成生产系统。">Research forged directly into production systems.</td>
+                  <td data-zh="以自有与受托资本，承担并为风险定价。">Bearing and pricing risk with our own and entrusted capital.</td>
+                  <td data-zh="构建协议与轨道，而不只是使用它们。">Building the protocols and rails, not merely using them.</td>
+                </tr>
+                <tr>
+                  <th scope="row" data-zh="场域">Domain</th>
+                  <td data-zh="他人生产系统中悬而未决的问题。">The unsolved problems inside others' production.</td>
+                  <td data-zh="A股、美股、加密——永不入睡的市场。">A-shares, US equities, crypto — markets that never sleep.</td>
+                  <td data-zh="跨越链、机构与国界的全球网络。">A global network across chains, institutions, and borders.</td>
+                </tr>
+                <tr>
+                  <th scope="row" data-zh="指向">Toward</th>
+                  <td data-zh="让智能成为可随时调度的公共基础设施。">Intelligence as public infrastructure — dispatchable on demand.</td>
+                  <td data-zh="让每一份风险，只获得它应得的回报。">Every unit of risk earning exactly what it is owed — no more.</td>
+                  <td data-zh="让价值像信息一样自由地跨境流动。">Value crossing borders as freely as information.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p
+            class="arch__note reveal"
+            data-zh="智能是方法，资本是检验场，信任是轨道。三者不是一个投资组合——而是同一台引擎，且它会复利。"
+          >
+            Intelligence is the method; capital, the proving ground; trust, the
+            rail. The three are not a portfolio — they are one engine, and it
+            compounds.
+          </p>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           03 — DIMENSIONS
+           ============================================================== -->
+      <section class="section" id="dimensions" aria-labelledby="dim-h">
+        <div class="container container--wide">
+          <div class="section__head reveal">
+            <span class="section__index">03 / 06</span>
+            <span class="section__kicker" data-zh="维度">Dimensions</span>
+          </div>
+          <h2 class="u-visually-hidden" id="dim-h" data-zh="三个维度">
+            The three dimensions
+          </h2>
+
+          <div class="dimensions">
+            <!-- I — INTELLIGENCE -->
+            <article class="dimension reveal">
+              <div class="dimension__index">D-01 · INTELLIGENCE</div>
+              <div class="dimension__roman">I</div>
+              <div>
+                <h3 class="dimension__title" data-zh="人工智能">
+                  Artificial Intelligence
+                </h3>
+                <div class="dimension__en" data-zh="研发 + 落地">
+                  Research &amp; Deployment
+                </div>
+              </div>
+              <p
+                class="dimension__body"
+                data-zh="我们对大模型做后训练与对齐，构建围绕它的算法，并把二者一起嵌入生产——在那里，一个模型要么证明自己，要么被弃用。同一套技术栈既服务客户，也运行我们自有的资本与链上系统：研究在这里不是一篇论文，而是产品本身。"
+              >
+                We post-train and align large models, build the algorithms
+                around them, and embed both into production — where a model
+                earns its keep or is discarded. The same stack serves clients
+                and runs our own capital and on-chain systems: research here is
+                not a paper. It is the product.
+              </p>
+              <div class="dimension__sublabel" data-zh="前沿">Frontier</div>
+              <ul class="dimension__list">
+                <li data-zh="后训练 · SFT · RLHF · DPO">Post-training · SFT · RLHF · DPO</li>
+                <li data-zh="推理与对齐">Reasoning &amp; alignment</li>
+                <li data-zh="自主智能体">Autonomous agents</li>
+                <li data-zh="推理优化与部署">Inference optimization &amp; serving</li>
+              </ul>
+            </article>
+
+            <!-- II — CAPITAL -->
+            <article class="dimension reveal">
+              <div class="dimension__index">D-02 · CAPITAL</div>
+              <div class="dimension__roman">II</div>
+              <div>
+                <h3 class="dimension__title" data-zh="量化金融">
+                  Quantitative Finance
+                </h3>
+                <div class="dimension__en" data-zh="自有 + 受托资本">
+                  Proprietary &amp; Managed Capital
+                </div>
+              </div>
+              <p
+                class="dimension__body"
+                data-zh="我们以自有与受托资本，在 A 股、美股与加密市场布局——系统化、多策略、全天候。市场是一个高维、非平稳的过程：我们用模型为它定价，不让任何模型无法辩护的持仓留存。这里，智能要面对唯一会付钱的裁判——市场。"
+              >
+                We deploy proprietary and entrusted capital across A-shares, US
+                equities, and crypto — systematic, multi-strategy, around the
+                clock. A market is a high-dimensional, non-stationary process:
+                we price it by model, and let no position stand that the model
+                cannot defend. Here intelligence meets the only judge that pays
+                — the market.
+              </p>
+              <div class="dimension__sublabel" data-zh="前沿">Frontier</div>
+              <ul class="dimension__list">
+                <li data-zh="市场微结构">Market microstructure</li>
+                <li data-zh="深度时序预测">Deep temporal forecasting</li>
+                <li data-zh="强化学习执行">Reinforcement-learning execution</li>
+                <li data-zh="稳健组合优化">Robust portfolio optimization</li>
+              </ul>
+            </article>
+
+            <!-- III — TRUST -->
+            <article class="dimension reveal">
+              <div class="dimension__index">D-03 · TRUST</div>
+              <div class="dimension__roman">III</div>
+              <div>
+                <h3 class="dimension__title" data-zh="区块链">Blockchain</h3>
+                <div class="dimension__en" data-zh="基础设施 + 跨境">
+                  Infrastructure &amp; Cross-border
+                </div>
+              </div>
+              <p
+                class="dimension__body"
+                data-zh="我们构建并运营基础设施，再把生产级的链上系统交付给机构——并在同一条轨道上，开展链上资产管理、跨境投资与咨询。区块链用一份证明取代中介：一台在过去无从建立信任之处、制造信任的机器。"
+              >
+                We build and operate the infrastructure, then deliver
+                production-grade on-chain systems to institutions — and run on
+                that same rail for on-chain asset management, cross-border
+                investment, and advisory. A blockchain replaces the intermediary
+                with a proof: a machine that manufactures trust where none was
+                possible before.
+              </p>
+              <div class="dimension__sublabel" data-zh="前沿">Frontier</div>
+              <ul class="dimension__list">
+                <li data-zh="智能合约与协议">Smart contracts &amp; protocols</li>
+                <li data-zh="零知识证明">Zero-knowledge proofs</li>
+                <li data-zh="跨链互操作">Cross-chain interoperability</li>
+                <li data-zh="跨境结算轨道">Cross-border settlement rails</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           04 — THE EDGE
+           ============================================================== -->
+      <section class="section" id="edge" aria-labelledby="edge-h">
+        <div class="container">
+          <div class="section__head reveal">
+            <span class="section__index">04 / 06</span>
+            <span class="section__kicker" data-zh="优势">The Edge</span>
+          </div>
+          <h2 class="u-visually-hidden" id="edge-h" data-zh="结构性优势">
+            Structural advantage
+          </h2>
+
+          <div class="ledger" data-stagger>
+            <div class="ledger__row">
+              <div class="ledger__key">
+                <span class="idx mono">01</span
+                ><span data-zh="跨域复利">Cross-domain compounding</span>
+              </div>
+              <p
+                class="ledger__val"
+                data-zh="一个内核供养三个维度，每个维度又把数据、资本与信任回流给其余两个。要竞争，对手必须同时赢下全部三个——这里的优势是相乘，不是相加。"
+              >
+                One core feeds three dimensions, and each returns data, capital,
+                and trust to the others. To compete, a rival must beat all three
+                at once — advantage here multiplies, it does not add.
+              </p>
+            </div>
+            <div class="ledger__row">
+              <div class="ledger__key">
+                <span class="idx mono">02</span
+                ><span data-zh="极端垂直整合">Extreme vertical integration</span>
+              </div>
+              <p
+                class="ledger__val"
+                data-zh="数据、模型、执行、结算——每一层都自研自营。我们不依赖任何打不开的黑箱；哪一层出问题，就在哪一层修复。"
+              >
+                Data, models, execution, settlement — every layer is built and
+                run in-house. We depend on no black box we cannot open, and we
+                fix what breaks at the layer where it breaks.
+              </p>
+            </div>
+            <div class="ledger__row">
+              <div class="ledger__key">
+                <span class="idx mono">03</span
+                ><span data-zh="自有资本">Proprietary capital</span>
+              </div>
+              <p
+                class="ledger__val"
+                data-zh="我们首先交易自己的资产负债表。我们不会让任何人承担我们自己尚未承担的风险——在这里，激励与方法是同一件事。"
+              >
+                We trade our own balance sheet first. We ask no one to carry a
+                risk we have not already taken ourselves — here the incentive
+                and the method are the same thing.
+              </p>
+            </div>
+            <div class="ledger__row">
+              <div class="ledger__key">
+                <span class="idx mono">04</span
+                ><span data-zh="全天候运行">Around-the-clock operation</span>
+              </div>
+              <p
+                class="ledger__val"
+                data-zh="从北京出发，横跨 A 股、美股与加密市场，账本从不收盘。三个时区轮流把它交到彼此手中——模型不眠。"
+              >
+                From Beijing, across A-shares, US equities, and crypto, the book
+                never closes. Three timezones hand it to one another in turn —
+                the model does not sleep.
+              </p>
+            </div>
+            <div class="ledger__row">
+              <div class="ledger__key">
+                <span class="idx mono">05</span
+                ><span data-zh="研究即产品">Research as product</span>
+              </div>
+              <p
+                class="ledger__val"
+                data-zh="前沿研究不是一页幻灯片，而是上线运行的系统——从论文到部署的距离以周计，而这段距离，就是护城河。"
+              >
+                Frontier research is not a slide. It is a system in production —
+                the distance from paper to deployment is measured in weeks, and
+                that distance is the moat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           05 — THE METHOD
+           ============================================================== -->
+      <section class="section" id="method" aria-labelledby="method-h">
+        <div class="container">
+          <div class="section__head reveal">
+            <span class="section__index">05 / 06</span>
+            <span class="section__kicker" data-zh="方法">The Method</span>
+          </div>
+
+          <div class="split split--12" style="margin-bottom: 3rem">
+            <h2
+              class="statement-lg reveal"
+              id="method-h"
+              data-zh="方法，是施加于我们自身的算法。"
+            >
+              A method is an algorithm applied to ourselves.
+            </h2>
+            <p
+              class="lead reveal measure"
+              data-zh="六个步骤，按顺序施加于我们触及的每一个问题——这是三个维度之下共享的同一套纪律。"
+            >
+              Six steps, applied in order to every problem we touch — the
+              discipline shared beneath all three dimensions.
+            </p>
+          </div>
+
+          <div class="axioms" data-stagger>
+            <div class="axiom">
+              <span class="axiom__num">01</span>
+              <h3 class="axiom__title" data-zh="归约为可计算">
+                Reduce to the computable
+              </h3>
+              <p
+                class="axiom__note"
+                data-zh="凡不能被表述为计算的问题，先重新表述，直到它可以。"
+              >
+                Any problem that cannot be stated as a computation is first
+                restated until it can.
+              </p>
+            </div>
+            <div class="axiom">
+              <span class="axiom__num">02</span>
+              <h3 class="axiom__title" data-zh="删除不可证伪">
+                Delete the unfalsifiable
+              </h3>
+              <p
+                class="axiom__note"
+                data-zh="无法被任何数据否证的假设没有价值。删除它。"
+              >
+                An assumption no data can refute carries no value. Remove it.
+              </p>
+            </div>
+            <div class="axiom">
+              <span class="axiom__num">03</span>
+              <h3 class="axiom__title" data-zh="最少参数">Minimise parameters</h3>
+              <p
+                class="axiom__note"
+                data-zh="每增加一个自由度，都要以过拟合为代价。"
+              >
+                Every added degree of freedom is paid for in overfitting.
+              </p>
+            </div>
+            <div class="axiom">
+              <span class="axiom__num">04</span>
+              <h3 class="axiom__title" data-zh="让数据说话">Let the data speak</h3>
+              <p
+                class="axiom__note"
+                data-zh="先验服从证据。回测先于直觉。"
+              >
+                Priors yield to evidence. The backtest precedes the intuition.
+              </p>
+            </div>
+            <div class="axiom">
+              <span class="axiom__num">05</span>
+              <h3 class="axiom__title" data-zh="自动化执行">Automate execution</h3>
+              <p
+                class="axiom__note"
+                data-zh="人决定原则，系统执行决策。"
+              >
+                People decide the principles. Systems execute the decisions.
+              </p>
+            </div>
+            <div class="axiom">
+              <span class="axiom__num">06</span>
+              <h3 class="axiom__title" data-zh="永不停止迭代">
+                Iterate without end
+              </h3>
+              <p
+                class="axiom__note"
+                data-zh="模型是过程，不是结论。边界持续移动。"
+              >
+                A model is a process, not a conclusion. The boundary keeps
+                moving.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           06 — THE HORIZON
+           ============================================================== -->
+      <section class="section" id="horizon" aria-labelledby="horizon-h">
+        <div class="container container--wide">
+          <div class="section__head reveal">
+            <span class="section__index">06 / 06</span>
+            <span class="section__kicker" data-zh="边界">The Horizon</span>
+          </div>
+
+          <div class="split split--12" style="margin-bottom: 3.5rem">
+            <h2
+              class="statement-lg reveal"
+              id="horizon-h"
+              data-zh="中心证明我们存在；消散的外圈证明我们仍在展开。"
+            >
+              The center proves we exist. The dispersing edge proves we are still
+              unfolding.
+            </h2>
+            <p
+              class="lead reveal measure"
+              data-zh="封闭的图形宣称「我们已经定义好了自己」。开放的辐射更诚实——我们的边界仍在移动。以下，是我们正在逼近的方向。"
+            >
+              A closed shape declares we have finished defining who we are. Open
+              radiation is more honest — our boundary is still moving. These are
+              the bets we are pushing toward.
+            </p>
+          </div>
+
+          <div class="frontier" data-stagger>
+            <div class="frontier__cell">
+              <div class="frontier__coord">H-01 · INTELLIGENCE</div>
+              <h3 class="frontier__name" data-zh="自主智能体经济">
+                Autonomous agent economies
+              </h3>
+              <p class="frontier__desc" data-zh="当智能体开始自主调度资本，参与者将不再只是人。">
+                When agents allocate capital, participants are no longer only
+                human.
+              </p>
+            </div>
+            <div class="frontier__cell">
+              <div class="frontier__coord">H-02 · CAPITAL</div>
+              <h3 class="frontier__name" data-zh="市场的因果模型">
+                Causal market models
+              </h3>
+              <p class="frontier__desc" data-zh="超越相关性——实时建模市场为何而动。">
+                Beyond correlation — modeling why markets move, in real time.
+              </p>
+            </div>
+            <div class="frontier__cell">
+              <div class="frontier__coord">H-03 · TRUST</div>
+              <h3 class="frontier__name" data-zh="可验证推理">
+                Verifiable inference
+              </h3>
+              <p class="frontier__desc" data-zh="以零知识证明，让每一次模型推理都可在链上验证。">
+                Zero-knowledge proofs that make every model inference checkable
+                on-chain.
+              </p>
+            </div>
+            <div class="frontier__cell">
+              <div class="frontier__coord">H-04 · CAPITAL × TRUST</div>
+              <h3 class="frontier__name" data-zh="零知识金融">
+                Zero-knowledge finance
+              </h3>
+              <p class="frontier__desc" data-zh="在不泄露任何持仓的前提下，证明偿付能力与合规。">
+                Prove solvency and compliance without revealing a single
+                position.
+              </p>
+            </div>
+            <div class="frontier__cell">
+              <div class="frontier__coord">H-05 · INTELLIGENCE × TRUST</div>
+              <h3 class="frontier__name" data-zh="机制设计自动化">
+                AI-designed mechanisms
+              </h3>
+              <p class="frontier__desc" data-zh="用 AI 设计市场与协议本身的规则。">
+                Using AI to design the rules of markets and protocols themselves.
+              </p>
+            </div>
+            <div class="frontier__cell">
+              <div class="frontier__coord">H-06 · ALL DIMENSIONS</div>
+              <h3 class="frontier__name" data-zh="复利引擎">
+                The compounding engine
+              </h3>
+              <p class="frontier__desc" data-zh="一个让智能、资本与信任相互放大的系统。">
+                One system where intelligence, capital, and trust amplify one
+                another.
+              </p>
+            </div>
+          </div>
+
+          <div class="closing reveal">
+            <p class="closing__line" data-zh="从一个原点，展开所有维度。">
+              From one point, all dimensions unfold.
+            </p>
+            <a class="closing__mail" href="mailto:xinhaozheng.vx@outlook.com">
+              xinhaozheng.vx@outlook.com
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================================================================
+         FOOTER
+         ================================================================ -->
+    <footer class="footer">
+      <div class="container container--wide">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <svg
+              class="footer__mark"
+              viewBox="0 0 100 100"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <circle cx="50" cy="50" r="8" fill="#fff" />
+              <g fill="#fff" opacity="0.85">
+                <circle cx="50" cy="26" r="4.6" />
+                <circle cx="70.78" cy="38" r="4.6" />
+                <circle cx="70.78" cy="62" r="4.6" />
+                <circle cx="50" cy="74" r="4.6" />
+                <circle cx="29.22" cy="62" r="4.6" />
+                <circle cx="29.22" cy="38" r="4.6" />
+              </g>
+              <g fill="#fff" opacity="0.35">
+                <circle cx="69" cy="17.09" r="2.2" />
+                <circle cx="88" cy="50" r="2.2" />
+                <circle cx="69" cy="82.91" r="2.2" />
+                <circle cx="31" cy="82.91" r="2.2" />
+                <circle cx="12" cy="50" r="2.2" />
+                <circle cx="31" cy="17.09" r="2.2" />
+              </g>
+            </svg>
+            <div class="brand__word" style="font-size: 0.95rem">
+              Vertex Dimension
+            </div>
+            <p class="footer__statement" data-zh="把世界，化为可计算的。">
+              Make the world computable.
+            </p>
+            <p class="footer__est label" data-zh="二〇二五年十一月创立 · 北京">
+              Founded November 2025 · Beijing
+            </p>
+          </div>
+
+          <div class="footer__col">
+            <h4 data-zh="索引">Index</h4>
+            <ul>
+              <li><a href="#mission" data-zh="01 — 使命">01 — Mission</a></li>
+              <li><a href="#architecture" data-zh="02 — 架构">02 — Architecture</a></li>
+              <li><a href="#dimensions" data-zh="03 — 维度">03 — Dimensions</a></li>
+              <li><a href="#edge" data-zh="04 — 优势">04 — Edge</a></li>
+              <li><a href="#method" data-zh="05 — 方法">05 — Method</a></li>
+              <li><a href="#horizon" data-zh="06 — 边界">06 — Horizon</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span class="footer__copy">© 2025–2026 Vertex Dimension</span>
+          <span class="footer__copy" data-zh="保留所有维度。"
+            >All dimensions reserved.</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts: classic order; file:// and http:// safe -->
+    <script defer src="assets/js/util.js"></script>
+    <script defer src="assets/js/field.js"></script>
+    <script defer src="assets/js/logo.js"></script>
+    <script defer src="assets/js/hero.js"></script>
+    <script defer src="assets/js/i18n.js"></script>
+    <script defer src="assets/js/app.js"></script>
+  </body>
+</html>
